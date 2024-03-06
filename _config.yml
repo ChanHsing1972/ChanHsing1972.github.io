@@ -14,9 +14,9 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 尘心 / 个人主页 # the main title
+title: 尘心 # the main title
 
-tagline: A student @ NJU # it will display as the sub-title
+tagline: 你走开你胖到我了 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   欢迎到此一游！
