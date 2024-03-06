@@ -1,8 +1,8 @@
 ---
 title: 🎂Happy Birthday!
 date: 2024-02-10 00:00:00 +0800
-categories: [Folder, Project]
-tags: [project]     # TAG names should always be lowercase
+categories: [Folder, Daily]
+tags: [daily]     # TAG names should always be lowercase
 ---
 
 “从今诸事愿、胜如旧。  
