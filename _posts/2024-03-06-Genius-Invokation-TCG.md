@@ -1,11 +1,13 @@
 ---
-title: Genius Invokation TCG
+title: 😋Genius Invokation TCG
 date: 2024-03-06 17:31:21 +0800
 categories: [Folder, Project]
 tags: [project]     # TAG names should always be lowercase
 ---
 
-# 😋Genius Invokation TCG
+不多废话，快来玩玩[简陋版七圣召唤](https://github.com/ChanHsing1972/Genius-Invokation-TCG)！
+
+技术很菜，游戏UI十分简朴😝，只用命令提示符实现了最最基本的功能……本质上就是一个~~赌博~~掷骰子的小游戏，胜负由随机数说了算🤣。
 
 Come and try [my first C project](https://github.com/ChanHsing1972/Genius-Invokation-TCG)! 
 
