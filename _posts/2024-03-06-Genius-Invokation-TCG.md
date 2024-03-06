@@ -2,7 +2,7 @@
 title: 😋Genius Invokation TCG
 date: 2024-03-06 17:31:21 +0800
 categories: [Folder, Project]
-tags: [project]     # TAG names should always be lowercase
+tags: [project]
 ---
 
 不多废话，快来玩玩[简陋版七圣召唤](https://github.com/ChanHsing1972/Genius-Invokation-TCG)！
