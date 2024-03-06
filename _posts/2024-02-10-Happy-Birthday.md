@@ -2,7 +2,7 @@
 title: 🎂Happy 19th Birthday!
 date: 2024-02-10 00:00:00 +0800
 categories: [Folder, Daily]
-tags: [daily]     # TAG names should always be lowercase
+tags: [daily]
 ---
 
 “从今诸事愿、胜如旧。  
