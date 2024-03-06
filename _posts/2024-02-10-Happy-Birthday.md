@@ -10,4 +10,4 @@ tags: [project]     # TAG names should always be lowercase
 🧨🧨🧧🧧🎊🎊  
 龙年大吉！十九岁大吉！  
 
-![2024-03-06-Happy-Birthday-pic]("")
+[2024-03-06-Happy-Birthday-pic]("")
