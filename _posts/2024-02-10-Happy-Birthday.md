@@ -10,4 +10,4 @@ tags: [daily]
 🧨🧨🧧🧧🎊🎊  
 龙年大吉！十九岁大吉！  
 
-![2024-02-10-Happy-Birthday-pic](/assets/2024-02-10-Happy-Birthday-pic.jpg){: width="972" height="589" .w-75 .normal}
+![2024-02-10-Happy-Birthday-pic](/assets/2024-02-10-Happy-Birthday-pic.jpg){: width="60%" .normal}
