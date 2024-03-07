@@ -13,4 +13,4 @@ Come and try [my first C project](https://github.com/ChanHsing1972/Genius-Invoka
 
 The project is completely powered by Command Prompt, which means the UI is rather simple. Improvement is still required in many aspects. But never mind. Just give it a shot!
 
-Because of the lack of time, graphics library is not availavle in the project. I'm planning to learn SDL2 to make the game more vivid & enjoyable. Graphics library would be applied to my future projects. Stay tuned.
+Because of the lack of time, graphics library is not available in the project. I'm planning to learn SDL2 to make the game more vivid & enjoyable. Graphics library would be applied to my future projects. Stay tuned.
