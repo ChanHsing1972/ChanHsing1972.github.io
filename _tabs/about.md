@@ -17,3 +17,9 @@ Welcome to my personal homepage!
 I'm currently a first year undergraduate student from [School of Intelligent Software and Engineering](https://ise.nju.edu.cn/) of [Nanjing University](https://www.nju.edu.cn/). Call me Chen or Samuel if you like. My research interest includes computer vision, computer graphics, machine learning, and computational photography.
 
 My hobbies include badminton, calligraphy, guitar, and **computer games**. Here are some of my favorite games: Battlefield V, Grand Theft Auto V, Assassin's Creed Odyssey, Dead by Daylight, Civilisation VI, Genshin Impact, Minecraft...Find more information on [my Steam homepage](https://steamcommunity.com/profiles/76561198819058885/).
+
+### ⚙️Update Log
+
+24/03/07 - Changed the template. Added new articles.
+
+24/02/23 - Set up the website. Added some introduction.
