@@ -59,3 +59,5 @@ tags: [article]
 **高新2023级12班 刘宇轩**  
 南京大学 技术科学试验班  
 qq：1422929865
+
+![2023-12-10-Chui-Meng-Dao-Xi-Zhou-pic.jpg](/assets/2023-12-10-Chui-Meng-Dao-Xi-Zhou-pic.jpg)  
