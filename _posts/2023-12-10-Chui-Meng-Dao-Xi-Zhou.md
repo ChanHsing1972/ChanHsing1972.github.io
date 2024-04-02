@@ -4,6 +4,7 @@ date: 2023-12-10 21:53:10 +0800
 categories: [Blogging, Article]
 tags: [article]
 ---
+
 *Written by Piggy Samuel. All rights reserved.*
 ### **第0节**
 &emsp;&emsp;今夜，是我从七高毕业的第126个夜晚。我坐在灯下望向窗外，一片淅沥的清雨腾起沁人的凉雾，将一盏盏泛着柔和光晕的路灯漫散开来，窄窄的小道无人惊扰，虫鸣声浸染出安详静谧的夜。  
