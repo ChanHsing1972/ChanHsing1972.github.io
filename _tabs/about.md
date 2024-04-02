@@ -8,9 +8,9 @@ order: 4
 
 在[NJU](https://www.nju.edu.cn/)[智能软件学院](https://ise.nju.edu.cn/)修炼的萌新大学牲，男，未婚，非单身。
 
-每日被早八晚九折磨得不成人形，梦想是实现~~全人类赖床自由~~中华民族伟大复兴，最喜欢的职业是~~日本天皇~~一切对祖国建设有贡献的职业，最想做的事是~~放完寒假就放暑假~~带焖焖猪一起到处旅行。
+每日被早八晚九折磨得不成人形，梦想是实现~~全人类赖床自由~~中华民族伟大复兴，最喜欢的职业是~~日本天皇（因为啥也不干却过得很舒坦）~~ 一切对祖国建设有贡献的职业，最想做的事是~~放完寒假就放暑假~~带焖焖猪一起到处旅行。
 
-热衷于羽毛球、书法、吉他、音乐和**游戏**（战地5，GTA5，刺客信条，杀鸡，文明6，原，MC……）。欲知详情，请移步[我的Steam主页](https://steamcommunity.com/profiles/76561198819058885/)。
+热衷于羽毛球🏸、书法🖊️、吉他🎸、音乐🎶和**游戏**🤩（战地5，GTA5，刺客信条，杀鸡，文明6，原，MC……）。欲知详情，请移步[我的Steam主页](https://steamcommunity.com/profiles/76561198819058885/)。
 
 Welcome to my personal homepage!
 
@@ -20,6 +20,8 @@ My hobbies include badminton, calligraphy, guitar, and **computer games**. Here 
 
 ### ⚙️Update Log
 
-24/03/07 - Changed the template. Added new articles.
+24/04/02 - Updated logos and favicons.
+
+24/03/07 - Replaced previous template with a better one. Added new articles.
 
 24/02/23 - Set up the website. Added some introduction.
