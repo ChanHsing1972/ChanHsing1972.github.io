@@ -61,4 +61,4 @@ tags: [article]
 南京大学 技术科学试验班  
 qq：1422929865
 
-![2023-12-10-Chui-Meng-Dao-Xi-Zhou-pic](/assets/img/2023-12-10-Chui-Meng-Dao-Xi-Zhou-pic.jpg)  
+![2023-12-10-pic](/assets/img/2023-12-10-pic.jpg)  
