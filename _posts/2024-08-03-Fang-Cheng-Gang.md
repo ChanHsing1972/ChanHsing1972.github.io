@@ -1,8 +1,8 @@
 ---
 title: 🤣失败的一日
 date: 2024-08-03 17:28:48 +0800
-categories: [Blogging, Article]
-tags: [article]
+categories: [Blogging, Daily]
+tags: [daily]
 ---
 
 今天是白浪滩半日游。然而防城港的交通让我们集体破防🤣🤣🤣
