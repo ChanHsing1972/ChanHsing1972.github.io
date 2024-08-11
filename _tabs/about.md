@@ -20,7 +20,7 @@ My hobbies include badminton, calligraphy, guitar, and **computer games**. Here 
 
 ### ⚙️ Update Log
 
-24/08/11 - Updated template. Added 'description' to articles. Adjusted layout.
+24/08/11 - Updated template. Added 'description' to articles. Adjusted layout. Breaking changes to categories and tags.
 
 24/04/02 - Updated logos and favicons.
 

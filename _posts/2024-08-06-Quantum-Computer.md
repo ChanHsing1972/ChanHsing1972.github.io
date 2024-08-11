@@ -2,8 +2,8 @@
 title: 🖥️ 量子计算机的原理、发展与应用
 description: 本文介绍了量子计算机的主要特点和基本原理，分析了量子计算机的发展历程，探讨了量子计算机未来的发展趋势，以及其在密码学、科学研究等多个领域的潜在应用。
 date: 2024-08-06 13:52:23 +0800
-categories: [Blogging, Article]
-tags: [article]
+categories: [Schoolwork, Articles]
+tags: [论文, 科光]
 math: true
 ---
 

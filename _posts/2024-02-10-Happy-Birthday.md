@@ -1,8 +1,8 @@
 ---
 title: 🎂 Happy 19th Birthday!
 date: 2024-02-10 00:00:00 +0800
-categories: [Blogging, Daily]
-tags: [daily]
+categories: [Blogging, Moments]
+tags: [生日]
 ---
 
 “从今诸事愿、胜如旧。  

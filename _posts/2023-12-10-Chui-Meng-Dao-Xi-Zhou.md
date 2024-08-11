@@ -1,8 +1,8 @@
 ---
 title: 🫡 吹梦到西洲
 date: 2023-12-10 21:53:10 +0800
-categories: [Blogging, Article]
-tags: [article]
+categories: [Blogging, Posts]
+tags: [七高, 回忆]
 ---
 
 *Written by Piggy Samuel. All rights reserved.*

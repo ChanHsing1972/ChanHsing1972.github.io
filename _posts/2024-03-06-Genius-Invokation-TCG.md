@@ -1,8 +1,8 @@
 ---
 title: 😋 Genius Invokation TCG
 date: 2024-03-06 17:31:21 +0800
-categories: [Blogging, Project]
-tags: [project]
+categories: [Schoolwork, Projects]
+tags: [CPL, 项目, 原神]
 ---
 
 不多废话，快来玩玩[简陋版七圣召唤](https://github.com/ChanHsing1972/Genius-Invokation-TCG)！
