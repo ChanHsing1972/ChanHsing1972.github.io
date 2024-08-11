@@ -28,4 +28,4 @@ My hobbies include badminton, calligraphy, guitar, and **computer games**. Here 
 
 24/02/23 - Set up the website. Added some introduction.
 
-![about](/assets/img/about.jpg)
+![about](/assets/img/about-pic.jpg)
