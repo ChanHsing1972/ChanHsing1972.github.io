@@ -22,6 +22,6 @@ My hobbies include badminton, calligraphy, guitar, and **computer games**. Here 
 
 24/04/02 - Updated logos and favicons.
 
-24/03/07 - Replaced previous template. Added new articles.
+24/03/07 - Replaced previous template.
 
 24/02/23 - Set up the website. Added some introduction.

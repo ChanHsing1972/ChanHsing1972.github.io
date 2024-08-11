@@ -1,5 +1,5 @@
 ---
-title: 🏆The Way to Success
+title: 🏆 The Way to Success
 date: 2023-12-20 12:16:32 +0800
 categories: [Blogging, Article]
 tags: [article]

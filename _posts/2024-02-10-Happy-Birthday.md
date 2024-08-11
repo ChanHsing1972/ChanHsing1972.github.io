@@ -1,5 +1,5 @@
 ---
-title: 🎂Happy 19th Birthday!
+title: 🎂 Happy 19th Birthday!
 date: 2024-02-10 00:00:00 +0800
 categories: [Blogging, Daily]
 tags: [daily]

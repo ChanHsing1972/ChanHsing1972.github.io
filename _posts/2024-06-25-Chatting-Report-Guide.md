@@ -1,5 +1,6 @@
 ---
-title: 🤟🏻微信聊天记录报告制作指南
+title: 🤟🏻 微信聊天记录报告制作指南
+description: 在纪念日制作了一份聊天报告，结合制作过程及个人体会撰写这份指南，以作备忘和分享之用。
 date: 2024-06-25 14:46:29 +0800
 categories: [Blogging, Article]
 tags: [article]

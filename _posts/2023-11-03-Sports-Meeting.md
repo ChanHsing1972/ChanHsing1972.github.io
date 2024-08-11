@@ -1,5 +1,5 @@
 ---
-title: 🚴‍♂️NJU 运动会
+title: 🚴‍♂️ NJU 运动会
 date: 2023-11-03 22:42:18 +0800
 categories: [Blogging, Daily]
 tags: [daily]

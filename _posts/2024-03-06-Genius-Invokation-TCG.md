@@ -1,5 +1,5 @@
 ---
-title: 😋Genius Invokation TCG
+title: 😋 Genius Invokation TCG
 date: 2024-03-06 17:31:21 +0800
 categories: [Blogging, Project]
 tags: [project]

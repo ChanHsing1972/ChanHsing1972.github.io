@@ -1,5 +1,5 @@
 ---
-title: 🤣失败的一日
+title: 🤣 失败的一日
 date: 2024-08-03 17:28:48 +0800
 categories: [Blogging, Daily]
 tags: [daily]
