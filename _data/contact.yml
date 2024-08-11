@@ -3,16 +3,25 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+- type: qq
+  icon: "fab fa-qq"
+  url: 'https://user.qzone.qq.com/1422929865/infocenter'
+
+- type: steam
+  icon: "fab fa-steam"
+  url: 'https://steamcommunity.com/profiles/76561198819058885/'
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
+#
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
@@ -23,6 +32,6 @@
 #   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Linkedin homepage
 #
-# - type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
+# type: stack-overflow
+# icon: 'fab fa-stack-overflow'
+# url:  ''                  # Fill with your stackoverflow homepage
