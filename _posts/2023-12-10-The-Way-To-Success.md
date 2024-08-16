@@ -2,7 +2,7 @@
 title: 🏆 The Way to Success
 date: 2023-12-20 12:16:32 +0800
 categories: [Schoolwork, Articles]
-tags: [英语, 读后感]
+tags: [英语]
 ---
 
 Abraham Lincoln, one of America’s most respected presidents once stated, “Give me six hours to chop down a tree, and I will spend the first hour sharpening the axe.” What lies behind the famous remark is the secret which leads individuals to success. It indicates the significance of comprehensive preparation and planning before undertaking any task.
