@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 
 title: 尘心 # the main title
 
-tagline: 你走开你胖到我了 # it will display as the sub-title
+tagline: 你走开你胖到我了 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   欢迎到此一游！
