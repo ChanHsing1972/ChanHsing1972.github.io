@@ -28,4 +28,4 @@ I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕�
 
 24/02/23 - Set up the website. Added some introduction.
 
-![about](/assets/img/about-pic.jpg)
+![about](../assets/img/about-pic.jpg)
