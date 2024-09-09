@@ -16,9 +16,9 @@ order: 4
 
 Hi there. Welcome to my personal homepage!
 
-I'm currently a first year undergraduate student from [School of Intelligent Software and Engineering](https://ise.nju.edu.cn/) of [Nanjing University](https://www.nju.edu.cn/). Call me Chen or Samuel if you like. 
+I'm currently a second year undergraduate student from [School of Intelligent Software and Engineering](https://ise.nju.edu.cn/) of [Nanjing University](https://www.nju.edu.cn/). Call me Chen or Samuel if you like. 
 
-I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕𝒆𝒓 𝒈𝒂𝒎𝒆𝒔**. Some of my favorite games - Black Myth: Wukong, Counter-Strike, Battlefield, Grand Theft Auto V, Assassin's Creed Odyssey, Dead by Daylight, Forza Horizon 4, Genshin Impact, Minecraft... Find more stuff about me on [my Steam homepage](https://steamcommunity.com/id/ChanHsing1972/). If we share mutual interests, feel free to send a friend request.
+I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕𝒆𝒓 𝒈𝒂𝒎𝒆𝒔**. Among my favorite games are - Black Myth: Wukong, Counter-Strike, Battlefield, Grand Theft Auto V, Assassin's Creed Odyssey, Dead by Daylight, Forza Horizon 4, Genshin Impact, Minecraft... Find more stuff about me on [my Steam homepage](https://steamcommunity.com/id/ChanHsing1972/). If we share mutual interests, feel free to send a friend request.
 
 ### ⚙️ Update Log
 
