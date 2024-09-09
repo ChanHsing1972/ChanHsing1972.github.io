@@ -22,6 +22,8 @@ I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕�
 
 ### ⚙️ Update Log
 
+24/09/09 - Adjusted markdown format. Completely abandoned TOC. 
+
 24/08/11 - Updated template. Added 'description' to articles. Adjusted layout. Breaking changes to categories and tags.
 
 24/04/02 - Updated logos and favicons.
