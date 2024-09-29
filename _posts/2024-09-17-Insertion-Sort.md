@@ -1,6 +1,6 @@
 ---
 title: 🧑🏻‍💻 排序
-description: The pseudocode of insertion sort & one possible inplementation with C++.
+description: The pseudocode of sorting in different ways and possible inplementations with C++.
 date: 2024-09-17 14:36:12 +0800
 categories: [Schoolwork, Notes]
 tags: [程序, 算法, 代码]
