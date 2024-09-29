@@ -1,5 +1,5 @@
 ---
-title: 🧑🏻‍💻 插入排序 - Insertion Sort
+title: 🧑🏻‍💻 排序
 description: The pseudocode of insertion sort & one possible inplementation with C++.
 date: 2024-09-17 14:36:12 +0800
 categories: [Schoolwork, Notes]
