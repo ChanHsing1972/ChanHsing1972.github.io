@@ -56,42 +56,42 @@ int main()
 
 ### Procedure 𝐌𝐞𝐫𝐠𝐞-𝐒𝐨𝐫𝐭
 
-**In**: An array $A$ of $n$ integers.  
-**Out**: A permutation of that array $A$ that is sorted (monotonic).
+**In**: An array $A$ of $n$ integers.    
+**Out**: A permutation of that array $A$ that is sorted (monotonic).  
 
-MergeSort($A[1...n]$):
-if n = 1:
-&emsp;&emsp;$sol[1...n] = [1...n]$
-else
-&emsp;&emsp;$solLeft[1...(n/2)] := MergeSort(A[1...(n/2)])$
-&emsp;&emsp;$solRight[1...(n/2)] := MergeSort(A[(n/2 + 1)...n])$
-&emsp;&emsp;$sol[1...n] := Merge(solLeft[1...(n/2)], solRight[1...(n/2)])$
-return $sol[1...n]$
+MergeSort($A[1...n]$):  
+if n = 1:  
+&emsp;&emsp;$sol[1...n] = [1...n]$  
+else  
+&emsp;&emsp;$solLeft[1...(n/2)] := MergeSort(A[1...(n/2)])$  
+&emsp;&emsp;$solRight[1...(n/2)] := MergeSort(A[(n/2 + 1)...n])$  
+&emsp;&emsp;$sol[1...n] := Merge(solLeft[1...(n/2)], solRight[1...(n/2)])$  
+return $sol[1...n]$  
 
-Merge($A[1...n], B[1...m]$): 
-$Aindex := 1, Bindex := 1, Result := []$
-// Scan $A$ and $B$ from left to right, 
-// Append the currently smallest to the result array.
-while $Aindex \leq A.length$ and $Bindex \leq B.length$
-&emsp;&emsp;if $A[Aindex] \leq B[Aindex]$
-&emsp;&emsp;&emsp;&emsp;$Result.AddLast(A[Aindex])$
-&emsp;&emsp;&emsp;&emsp;$Aindex := Aindex + 1$
-&emsp;&emsp;else
-&emsp;&emsp;&emsp;&emsp;$Result.AddLast(B[Bindex])$
-&emsp;&emsp;&emsp;&emsp;$Bindex := Bindex + 1$
+Merge($A[1...n], B[1...m]$):   
+$Aindex := 1, Bindex := 1, Result := []$  
+// Scan $A$ and $B$ from left to right,   
+// Append the currently smallest to the result array.  
+while $Aindex \leq A.length$ and $Bindex \leq B.length$  
+&emsp;&emsp;if $A[Aindex] \leq B[Aindex]$  
+&emsp;&emsp;&emsp;&emsp;$Result.AddLast(A[Aindex])$  
+&emsp;&emsp;&emsp;&emsp;$Aindex := Aindex + 1$  
+&emsp;&emsp;else  
+&emsp;&emsp;&emsp;&emsp;$Result.AddLast(B[Bindex])$  
+&emsp;&emsp;&emsp;&emsp;$Bindex := Bindex + 1$  
 
-// Copy the remaining elements of  A and B
-while $Aindex \leq A.length$
-&emsp;&emsp;$Result.AddLast(A[Aindex])$
-&emsp;&emsp;$Aindex := Aindex + 1$
-while $Bindex \leq B.length$
-&emsp;&emsp;$Result.AddLast(B[Bindex])$
-&emsp;&emsp;$Bindex := Bindex + 1$
-return $Result$
+// Copy the remaining elements of  A and B  
+while $Aindex \leq A.length$  
+&emsp;&emsp;$Result.AddLast(A[Aindex])$  
+&emsp;&emsp;$Aindex := Aindex + 1$  
+while $Bindex \leq B.length$  
+&emsp;&emsp;$Result.AddLast(B[Bindex])$  
+&emsp;&emsp;$Bindex := Bindex + 1$  
+return $Result$  
 
 ---
 
-One possible inplementation with C++:
+One possible inplementation with C++:  
 
 ```c++
 #include <bits/stdc++.h>
