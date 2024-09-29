@@ -33,24 +33,24 @@ using namespace std;
 
 int main()
 {
-  int arr[100], len;
-  cin >> len;
-  for (int t = 0; t < len; t++)
-    cin >> arr[t];
-  for (int i = 1; i < len; i++)
-  {
-    int key = arr[i];               // 把要比较的牌从手牌里单独抽出来
-    int j = i - 1;
-    while (j > 0 && arr[j] > key)   // 将此牌与前面的牌比较大小
+    int arr[100], len;
+    cin >> len;
+    for (int t = 0; t < len; t++)
+      cin >> arr[t];
+    for (int i = 1; i < len; i++)
     {
-      arr[j + 1] = arr[j];          // 把前面的大牌依次往后挪，空出位置
-      j--;
+      int key = arr[i];               // 把要比较的牌从手牌里单独抽出来
+      int j = i - 1;
+      while (j > 0 && arr[j] > key)   // 将此牌与前面的牌比较大小
+      {
+        arr[j + 1] = arr[j];          // 把前面的大牌依次往后挪，空出位置
+        j--;
+      }
+      arr[j + 1] = key;               // 把此牌插入合适的位置
     }
-    arr[j + 1] = key;               // 把此牌插入合适的位置
-  }
-  for (int t = 0; t < len; t++)
-    cout << arr[t] << " ";
-  return 0;
+    for (int t = 0; t < len; t++)
+      cout << arr[t] << " ";
+    return 0;
 }
 ```
 
@@ -59,8 +59,8 @@ int main()
 **In**: An array $A$ of $n$ integers.    
 **Out**: A permutation of that array $A$ that is sorted (monotonic).  
 
-MergeSort($A[1...n]$):  
-if n = 1:  
+**MergeSort**($A[1...n]$):  
+if $n = 1$  
 &emsp;&emsp;$sol[1...n] = [1...n]$  
 else  
 &emsp;&emsp;$solLeft[1...(n/2)] := MergeSort(A[1...(n/2)])$  
@@ -68,8 +68,8 @@ else
 &emsp;&emsp;$sol[1...n] := Merge(solLeft[1...(n/2)], solRight[1...(n/2)])$  
 return $sol[1...n]$  
 
-Merge($A[1...n], B[1...m]$):   
-$Aindex := 1, Bindex := 1, Result := []$  
+**Merge**($A[1...n], B[1...m]$):   
+$Aindex := 1, Bindex := 1, Result := [ ]$  
 // Scan $A$ and $B$ from left to right,   
 // Append the currently smallest to the result array.  
 while $Aindex \leq A.length$ and $Bindex \leq B.length$  
@@ -99,52 +99,52 @@ using namespace std;
 
 void merge(int a[], int result[], int left, int mid, int right)
 {
-	int i = left, j = mid + 1, k = left;
+    int i = left, j = mid + 1, k = left;
 
-	while (i <= mid && j <= right)
-	{
-		if (a[i] <= a[j])
-			result[k++] = a[i++];
-		else
-			result[k++] = a[j++];
-	}
+    while (i <= mid && j <= right)
+    {
+    if (a[i] <= a[j])
+        result[k++] = a[i++];
+    else
+        result[k++] = a[j++];
+    }
 
-	while (i <= mid)
-		result[k++] = a[i++];
-	while (j <= right)
-		result[k++] = a[j++];
+    while (i <= mid)
+        result[k++] = a[i++];
+    while (j <= right)
+        result[k++] = a[j++];
 
-	for (i = left; i <= right; i++)
-		a[i] = result[i];
+    for (i = left; i <= right; i++)
+        a[i] = result[i];
 }
 
 void merge_sort(int a[], int result[], int left, int right)
 {
-	if (left < right)
-	{
-		int mid = (left + right) / 2;
-		merge_sort(a, result, left, mid);
-		merge_sort(a, result, mid + 1, right);
-		merge(a, result, left, mid, right);
-	}
+    if (left < right)
+    {
+        int mid = (left + right) / 2;
+        merge_sort(a, result, left, mid);
+        merge_sort(a, result, mid + 1, right);
+        merge(a, result, left, mid, right);
+    }
 }
 
 int main()
 {
-	int N;
-	cin >> N;
-	int *a = new int[N], *result = new int[N];
+    int N;
+    cin >> N;
+    int *a = new int[N], *result = new int[N];
 
-	for (int i = 0; i < N; i++)
-		cin >> a[i];
+    for (int i = 0; i < N; i++)
+        cin >> a[i];
 
-	merge_sort(a, result, 0, N - 1);
+    merge_sort(a, result, 0, N - 1);
 
-	for (int i = 0; i < N; i++)
-		cout << a[i] << (i == N - 1 ? "\n" : " ");
+    for (int i = 0; i < N; i++)
+        cout << a[i] << (i == N - 1 ? "\n" : " ");
 
-	delete[] a;
-	delete[] result;
-	return 0;
+    delete[] a;
+    delete[] result;
+    return 0;
 }
 ```
