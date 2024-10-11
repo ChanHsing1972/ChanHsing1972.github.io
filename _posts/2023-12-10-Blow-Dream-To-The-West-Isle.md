@@ -9,8 +9,6 @@ image:
   path: ../assets/img/2023-12-10-pic-1.jpg
 ---
 
-{% include embed/audio.html src='/assets/audio/Blowing-In-The-Wind.mp3' %}
-
 ## **第 0 节**
 
 &emsp;&emsp;今夜，是我从七高毕业的第 126 个夜晚。我坐在灯下望向窗外，一片淅沥的清雨腾起沁人的凉雾，将一盏盏泛着柔和光晕的路灯漫散开来，窄窄的小道无人惊扰，虫鸣声浸染出安详静谧的夜。
