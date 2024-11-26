@@ -5,6 +5,8 @@ date: 2024-11-26 10:05:44 +0800
 categories: [Schoolwork, Notes]
 tags: [程序, 算法, 代码]
 math: true
+image:
+  path: ../assets/img/graph-traversal.png
 ---
 
 ## **广度优先搜索**
