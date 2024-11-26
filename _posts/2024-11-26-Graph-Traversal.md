@@ -9,7 +9,7 @@ math: true
 
 ## **广度优先搜索**
 
-- Basic Idea of BFS:
+- Basic Idea of BFS:  
   - Start at the source node $s$;
   - Visit other nodes (reachable from $s$) “layer by layer”
 - How to implement BFS?
@@ -21,9 +21,10 @@ math: true
 - What if the graph is not connected?
   - Easy, do a BFS for each connected component!
 
-**BFSSkeleton(G, s):**
+**BFSSkeleton(G, s):**  
 for **each** $u$ **in** $V$  
-&emsp;&emsp;$u.dist := INF, u.discovered := False, s.dist := 0, s.discovered := True$  
+&emsp;&emsp;$u.dist := INF, u.discovered := False,  
+&emsp;&emsp;s.dist := 0, s.discovered := True$  
 $Q.enque(s)$  
 while $!Q.empty()$  
 &emsp;&emsp;$u := Q.dequeue()$  
@@ -126,13 +127,13 @@ int main()
 - What if the graph is not (strongly) connected?
   - Do DFS from multiple sources.
 
-**DFSSkeleton(G, s):**
+**DFSSkeleton(G, s):**  
 $s.visited := True$  
 for **each** $edge(s, v)$ **in** $E$  
 &emsp;&emsp;if $!v.visited$  
 &emsp;&emsp;&emsp;&emsp;$DFSSkelecton(G, v)$  
 
-**DFSIterSkeleton(G, s):**
+**DFSIterSkeleton(G, s):**  
 **Stack** $Q$  
 $Q.push(s)$  
 while $!Q.empty()$  
