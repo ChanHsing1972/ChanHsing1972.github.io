@@ -8,7 +8,7 @@ order: 4
 
 *若加载速度缓慢，可使用魔法 🪄 访问~*
 
-我叫尘心，是一名在 [NJU](https://www.nju.edu.cn/) [智能软件学院](https://ise.nju.edu.cn/)修炼的萌新大学牲，男，未婚，非单身。
+我叫尘心，是一名在 [NJU](https://www.nju.edu.cn/) [智能软件与工程学院](https://ise.nju.edu.cn/)修炼的萌新大学牲，男，未婚，非单身。
 
 每日被早八晚九折磨得不成人形，梦想是实现终生赖床自由，最喜欢的职业是日本天皇（啥事不干也能过得舒坦），最想做的事是放完寒假就放暑假，以及带焖焖猪一起到处旅行。
 
@@ -21,6 +21,8 @@ I'm currently a second year undergraduate student from [School of Intelligent So
 I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕𝒆𝒓 𝒈𝒂𝒎𝒆𝒔**. Among my favorite games are - Black Myth: Wukong, Counter-Strike 2, Battlefield, Grand Theft Auto V, Assassin's Creed Odyssey, Dead by Daylight, Forza Horizon 4, Genshin Impact, Minecraft... Find more stuff about me on [my Steam homepage](https://steamcommunity.com/id/ChanHsing1972/). If we share mutual interests, feel free to send a friend request.
 
 ### ⚙️ Update Log
+
+24/12/02 - Changed Favicon.
 
 24/09/09 - Adjusted markdown format. Completely abandoned TOC. 
 
