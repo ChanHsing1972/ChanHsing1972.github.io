@@ -22,11 +22,13 @@ I enjoy badminton, calligraphy, guitar, music, and **𝒄𝒐𝒎𝒑𝒖𝒕�
 
 ### ⚙️ Update Log
 
-24/12/02 - Changed Favicon.
+24/12/02 - Changed favicon into a brand new gradient-colored image.
+
+24/11/26 - Now my personal website has acquired a completely new domain name and the speed of accessing it has been significantly enhanced with the application of CDN!
 
 24/09/09 - Adjusted markdown format. Completely abandoned TOC. 
 
-24/08/11 - Updated template. Added 'description' to articles. Adjusted layout. Breaking changes to categories and tags.
+24/08/11 - Updated template. Added 'description' to articles. Adjusted layout. Breaking changes to 'categories' and 'tags'.
 
 24/04/02 - Updated logos and favicons.
 
