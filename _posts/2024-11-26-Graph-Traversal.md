@@ -25,8 +25,8 @@ image:
 
 **BFSSkeleton(G, s):**  
 for **each** $u$ **in** $V$  
-&emsp;&emsp;$u.dist := INF, u.discovered := False,  
-&emsp;&emsp;s.dist := 0, s.discovered := True$  
+&emsp;&emsp;$u.dist := INF, u.discovered := False,$  
+&emsp;&emsp;$s.dist := 0, s.discovered := True$  
 $Q.enque(s)$  
 while $!Q.empty()$  
 &emsp;&emsp;$u := Q.dequeue()$  
