@@ -44,10 +44,6 @@ math: true
 - $n$ 位带符号整数可表示的数值范围为 $-2^{n-1}～(2^{n-1}-1)$。
 
 - **浮点数**：**注意加上隐藏的 1！**
-
-    | 1 位符号 | 8 位阶码 | 23 位尾数 |
-    | :------: | :------: | :-------: |
-
     - $N=(-1)^S \times 1.尾数 \times 2^{阶码-127}$ $(1 \leq 阶码 \leq 254)，$
     - $N=(-1)^S \times 0.尾数 \times 2^{-126}$ $(阶码=0)，$
     - $N=\pm \infty$ $(阶码=255， 尾数=0)，$
@@ -63,16 +59,16 @@ math: true
 
 -   串行进位加法器 (CRA)：X 与 Y 逐位相加，位间进位串行传送，所用元件较少，但进位传递时间较长。
 
-<div align="center"><img src="../assets/img/计组/计组-串行进位加法器.png" width="50%"></div>
+<div align="center"><img src="../assets/img/计组/计组-串行进位加法器.png" width="50%" alt="串行进位加法器"></div>
 
 -   并行进位加法器 (CLA)：更多位数的 CLA 只会增加逻辑门的输入端个数，而不会增加门的级数。但是由于CLA部件中连线数量和输入端个数的增多，使得实现电路中需要具有大驱动信号和大扇入门。
 
 
-<div align="center"><img src="../assets/img/计组/计组-并行进位加法器.png" width="50%"></div>
+<div align="center"><img src="../assets/img/计组/计组-并行进位加法器.png" width="50%" alt="并行进位加法器"></div>
 
 -   带标志位的加法器：
 
-<div align="center"><img src="../assets/img/计组/计组-带标志位的加法器.png" width="60%"></div>
+<div align="center"><img src="../assets/img/计组/计组-带标志位的加法器.png" width="60%" alt="带标志位的加法器"></div>
 
 ### 3.5 - 浮点数加减运算
 
@@ -163,7 +159,7 @@ math: true
     - 每个过程都有自己的栈区，称为**栈帧**，因此，一个栈由若干栈帧组成，每个栈帧用专门的帧指针寄存器指定起始位置，MIPS 中的帧指针寄存器是 `$fp`。当前栈帧范围在帧指针 `$fp` 和栈指针 `$sp` 指向区域之间。
     - 在程序执行过程中，每调用一次过程，都会在栈中生成一个对应的新栈帧，而在执行返回指令前对应的栈帧在栈中都已被释放。
 
-<div align="center"><img src="../assets/img/计组/计组-栈和栈帧.png" width="80%"></div>
+<div align="center"><img src="../assets/img/计组/计组-栈和栈帧.png" width="80%" alt="栈和栈帧"></div>
 
 ## **第 5 章 - 中央处理器**
 
@@ -175,7 +171,7 @@ math: true
 
 - **CPU 的组成**：不管 CPU 多复杂，**数据通路**和**控制器**是其**两大基本组成部分**。通常把数据通路中专门进行数据运算的部件称为**执行部件**。指令执行所用到的元件有两类：组合逻辑元件 (操作元件) 和存储元件 (状态元件)。连接这些元件的方式有两种：总线方式和分散连接方式。
 
-    <div align="center"><img src="../assets/img/计组/计组-CPU组成.png" width="60%"></div>
+    <div align="center"><img src="../assets/img/计组/计组-CPU组成.png" width="60%" alt="CPU 组成"></div>
 
 - **数据通路**：由操作元件和状态元件通过总线或分散方式连接而成的进行数据存储、处理和传送的路径。
 
@@ -185,14 +181,14 @@ math: true
 
 ### 5.2 - 单周期处理器
 
-<div align="center"><img src="../assets/img/计组/计组-单周期数据通路.png" width="70%"></div>
+<div align="center"><img src="../assets/img/计组/计组-单周期数据通路.png" width="70%" alt="单周期数据通路"></div>
 
 - **时钟周期的确定**：**CPU 执行程序的时间由 3 个关键因素决定：指令数目、时钟周期和 CPI**。指令数目由编译器和指令集决定，而时钟周期和 CPI 由处理器的设计与实现决定。**单周期处理器每条指令在一个时钟周期内完成，所以 CPI 为 1**，而时钟周期往往很长，通常取最复杂指令所用的指令周期，即 lw 指令周期。
 - **单周期的缺陷**：单周期处理器的 CPI 为 1，所有指令的执行时间都以最长的 load 指令为准，时钟周期远远大于其他指令实际所需的执行时间，效率极低。
 
 ### 5.3 - 多周期处理器
 
-<div align="center"><img src="../assets/img/计组/计组-多周期数据通路.png" width="90%"></div>
+<div align="center"><img src="../assets/img/计组/计组-多周期数据通路.png" width="90%" alt="多周期数据通路"></div>
 
 - **基本思想**：将每条指令的执行分成多个大致相等的阶段，每个阶段在一个时钟周期内完成。
     - 尽量分成大致相等的若干阶段；  
@@ -202,7 +198,7 @@ math: true
 - **多周期的优点**：时钟周期短；不同指令所用周期数可以不同；允许功能部件在一条指令执行过程中被重复使用。
 - **多周期处理器中，每条指令分多个阶段执行，每个阶段占一个时钟周期，称为一个状态**。因此，一条指令的执行过程由多个状态组成。
 
-<div align="center"><img src="../assets/img/计组/计组-指令执行状态转换图.png" width="80%"></div>
+<div align="center"><img src="../assets/img/计组/计组-指令执行状态转换图.png" width="80%" alt="指令执行状态转换图"></div>
 
 ### 5.4 - 异常处理
 
@@ -275,8 +271,8 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
         - 动态预测：利用分支指令发生转移的历史情况来进行预测，并根据实际执行情况动态调整预测位。分为一位预测位和多位预测位。
 
             <div align = "left">
-                <img  src="../assets/img/计组/计组-一位分支预测.png" width="40%"/>
-                <img  src="../assets/img/计组/计组-多位分支预测.png" width="30%"/>
+                <img  src="../assets/img/计组/计组-一位分支预测.png" width="30%" alt="一位分支预测"/>
+                <img  src="../assets/img/计组/计组-多位分支预测.png" width="20%" alt="多位分支预测"/>
             </div>
 
         - 延迟分支：简单讲，就是用分支前的无关指令代替 nop 来填充延迟损失时间片 $C$，不够时用 nop 填充。分支指令后面被填的指令位置称为分支延迟槽，需要填入的指令条数 (即分支延迟槽数) 等于延迟损失时间片 $C$。此方法缺点较多。
@@ -371,7 +367,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
         cache \ 行号 = 主存块号 \ mod \ (cache \ 行数)。
         $$
 
-        <div align="center"><img src="../assets/img/计组/计组-直接映射.png" width="80%"></div>
+        <div align="center"><img src="../assets/img/计组/计组-直接映射.png" width="80%" alt="直接映射"></div>
 
         - 主存地址划分方法：标记 + cache 行号 + 块内地址 (如上图)。
 
@@ -415,7 +411,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
         cache \ 组号 = 主存块号 \ mod \ (cache \ 组数)。
         $$
 
-        <div align="center"><img src="../assets/img/计组/计组-组相联映射.png" width="80%"></div>
+        <div align="center"><img src="../assets/img/计组/计组-组相联映射.png" width="80%" alt="组相联映射"></div>
 
         - 主存地址划分方法：标记 + cache 组号 + 块内地址
 
@@ -469,7 +465,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
 - **实质**：
 
-    <div align="center"><img src="../assets/img/计组/计组-虚拟存储机制.png" width="70%"></div> 
+    <div align="center"><img src="../assets/img/计组/计组-虚拟存储机制.png" width="70%" alt="虚拟存储机制"></div> 
 
     - 程序员在比实际主存空间大得多的**虚拟地址空间中编写程序**；
     - 程序执行时，把**当前需要的程序段和相应的数据块调入主存，其他暂不用的部分存放在磁盘**上；
@@ -487,7 +483,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
     - **页表**：
 
-        <div align="center"><img src="../assets/img/计组/计组-页表.png" width="80%"></div> 
+        <div align="center"><img src="../assets/img/计组/计组-页表.png" width="80%" alt="页表"></div> 
 
         - 定义：进程中的**每个虚拟页在页表中都有一个对应的表项，称为页表项**，用于建立各个虚拟页与存放的主存页框号或磁盘上存储位置之间的**关系** (与 cache 类似)。
         - 内容：该虚拟页的存放位置、装入位、修改位、使用位、访问权限位和禁止缓存位等。其中，存放位置字段：建立虚拟页和物理页框之间的映射，用于进行虚拟地址到物理地址的转换。
@@ -504,11 +500,11 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
         - 地址变换过程：首先根据页表基址寄存器的内容，找到主存中对应的页表起始位置 (页表基地址)，然后**将虚拟地址中的虚拟页号作为索引，找到对应的页表项**，若装入位为 1，则**取出物理页号，和虚拟地址中的页内地址拼接，形成访问主存时实际的物理地址**；若装入位为 0，则说明缺页。
 
-            <div align="center"><img src="../assets/img/计组/计组-虚拟内存的地址转换.png" width="60%"></div>
+            <div align="center"><img src="../assets/img/计组/计组-虚拟内存的地址转换.png" width="60%" alt="虚拟内存的地址转换"></div>
 
     - **快表 TLB** ：
 
-        <div align="center"><img src="../assets/img/计组/计组-快表.png" width="80%"></div> 
+        <div align="center"><img src="../assets/img/计组/计组-快表.png" width="80%" alt="快表"></div> 
 
         - 定义：在 **cache 中的页表项组成的页表**称为后备转换缓冲器 **(TLB)**，通常称为快表。相应地称**主存中的页表为慢表**。
         - 目的：在地址转换时，首先到快表中查页表项，如果命中，则无须访问主存中的页表，从而减少访存次数和访存时间开销。
@@ -517,7 +513,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
         - **CPU 的访存过程**：主要为 CPU 虚拟地址 → TLB → 主存慢表 → cache。
 
-            <div align="center"><img src="../assets/img/计组/计组-访存过程.png" width="80%"></div> 
+            <div align="center"><img src="../assets/img/计组/计组-访存过程.png" width="80%" alt="访存过程"></div> 
 
 - 分段式虚拟存储器：根据程序的模块化性质，可按程序的逻辑结构划分成多个相对独立的部分，这些相对独立的部分被称为段。可以把段作为基本信息单位在主存和外存之间传送和定位。
 
@@ -581,7 +577,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
 -   [x] &nbsp; 计算机系统的抽象层及其转换？ 
 
-    > <div align="left"><img src="../assets/img/计组/计组-计算机系统抽象层及转换.png" width="40%"></div> 
+    > <div align="left"><img src="../assets/img/计组/计组-计算机系统抽象层及转换.png" width="40%" alt="计算机系统抽象层及转换"></div> 
 
 -   [x] &nbsp; 用户 CPU 时间计算？ 
 
@@ -648,7 +644,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
 -   [x] &nbsp; CPU 的基本组成？操作元件和状态元件的区别？ 
 
-    >   <div align="left"><img src="../assets/img/计组/计组-CPU组成.png" width="60%"></div>
+    >   <div align="left"><img src="../assets/img/计组/计组-CPU组成.png" width="60%" alt="CPU 组成"></div>
     >
     >   两大基本组成部分：**数据通路**和**控制器**。数据通路中，进行数据运算的部件：**执行部件**。
     >指令执行用到的元件：**操作元件 & 状态元件**。连接这些元件的方式：**总线方式 / 分散连接方式**。
@@ -787,7 +783,7 @@ CPU 执行每条指令的过程中，都会对异常事件和中断请求进行�
 
 -   [x] &nbsp; *I/O 子系统层次结构？每层的基本功能？ 
 
-    >   <div align="left"><img src="../assets/img/计组/计组-IO子系统层次结构.png" width="40%"></div>
+    >   <div align="left"><img src="../assets/img/计组/计组-IO子系统层次结构.png" width="40%" alt="I/O 子系统层次结构"></div>
 
 -   [x] &nbsp; *用户程序、C 语言库、内核之间的关系？
 
