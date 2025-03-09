@@ -6,7 +6,7 @@ categories: [Blogging, Posts]
 tags: [技术, 教程]
 ---
 
-## **0 - 前言**
+## 0 - 前言
 
 为何要注册美区 Apple ID？
 
@@ -20,7 +20,7 @@ tags: [技术, 教程]
 - 一个可以正常接收短信的电话号码（可以是中国大陆的）
 - 推荐的浏览器：Safari / Chrome
 
-## **1 - 注册账号**
+## 1 - 注册账号
 
 访问 [Apple ID 创建页面](https://appleid.apple.com/account)，填写信息。除以下信息外，其余部分均无需修改。
 
@@ -36,7 +36,7 @@ tags: [技术, 教程]
 
 ![pic-1](../assets/img/2024-09-09-pic%20(2).png){: width="60%" .normal}
 
-## **2 - 修改付款方式**
+## 2 - 修改付款方式
 
 点击界面右上角的下箭头 `﹀`，在列表中选择“个人信息”。
 
@@ -50,7 +50,7 @@ tags: [技术, 教程]
 
 ![pic-5](../assets/img/2024-09-09-pic%20(5).png){: width="60%" .normal}
 
-## **3 - 设置地址**
+## 3 - 设置地址
 
 向下滑动，来到地址填写区域。我们需要生成一个美国免税州的虚拟地址。美国的免税州有五个，分别是：Oregon, Alaska, Delaware, Montana, New Hampshire。
 
@@ -68,14 +68,14 @@ tags: [技术, 教程]
 
 ![pic-9](../assets/img/2024-09-09-pic%20(9).png){: width="60%" .normal}
 
-## **4 - 登录账号**
+## 4 - 登录账号
 
 进入 AppStore，点击右上角头像，下拉至底部，登出国区 Apple ID；再上滑至顶部，登录刚才注册的美区 Apple ID。
 
 > 注意：请从 AppStore 登录，切勿从“设置”中登录。
 {: .prompt-warning }
 
-## **5 - 检查 Apple ID**
+## 5 - 检查 Apple ID
 
 登录完成后，任意下载一个软件，点击“获取”后，弹出以下页面，点击“检查”。
 
@@ -87,7 +87,7 @@ tags: [技术, 教程]
 
 现在，你便成功拥有了一个已激活的美区 Apple ID！
 
-## **6 - 提示**
+## 6 - 提示
 
 拥有美区 Apple ID 后，解锁的不仅是美区 AppStore，还有 Apple Arcade, Apple Book, Apple TV+, Apple Fitness+ 等一系列未向国区开放的领域。
 

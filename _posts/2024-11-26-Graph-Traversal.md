@@ -9,7 +9,7 @@ image:
   path: ../assets/img/graph-traversal.png
 ---
 
-## **广度优先搜索**
+## 广度优先搜索
 
 - Basic Idea of BFS:  
   - Start at the source node $s$;
@@ -119,7 +119,7 @@ int main()
 ```
 
 
-## **深度优先搜索**
+## 深度优先搜索
 
 - Basic Idea of DFS, much like exploring a maze:
   - Use a ball of string and a piece of chalk.

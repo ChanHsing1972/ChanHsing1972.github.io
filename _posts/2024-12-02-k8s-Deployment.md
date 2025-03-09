@@ -9,20 +9,20 @@ math: true
 
 KubeEdge 由云和边缘组成。它建立在 Kubernetes 之上，为联网、应用部署和云与边缘之间的元数据同步提供核心基础设施支持。
 
-## **资源列表**
+## 资源列表
 
-| 类型 | 操作系统 | 主机名 | IP（内网） | 所需软件 |
-| :---: | :---: | :---: | :---: | :---: |
-| 云端服务器 | Centos 7.4 | k8s-master | 172.31.62.175 | Docker, Kubernetes cluster, cloudcore |
-| 边缘服务器 | Ubuntu 20.04.6 | node1 | 192.168.224.132 | Docker, MQTT（选用）, edgecore |
+|    类型    |    操作系统    |   主机名   |   IP（内网）    |               所需软件                |
+| :--------: | :------------: | :--------: | :-------------: | :-----------------------------------: |
+| 云端服务器 |   Centos 7.4   | k8s-master |  172.31.62.175  | Docker, Kubernetes cluster, cloudcore |
+| 边缘服务器 | Ubuntu 20.04.6 |   node1    | 192.168.224.132 |    Docker, MQTT（选用）, edgecore     |
 
 注意：配置时使用的云端服务器 IP **均指内网 IP**，可执行 `ifconfig` 命令查询。本文中所有 IP 地址应根据实际修改。
 
 由于云端和边缘系统不同，故操作有差异，为避免混淆，本文将分为两个部分，分别记录云端和边缘的配置过程。
 
-## **1 - 云端服务器**
+## 1 - 云端服务器
 
-### **1.1 - 准备环境** 
+### 1.1 - 准备环境
 
 关闭防火墙：
 ```
@@ -70,7 +70,7 @@ yum install ntpdate -y
 ntpdate time.windows.com
 ```
 
-### **1.2 - 安装 Docker**
+### 1.2 - 安装 Docker
 
 拉取仓库镜像并下载：
 ```
@@ -120,7 +120,7 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-### **1.3 - 安装 Kubernetes**
+### 1.3 - 安装 Kubernetes
 
 添加阿里云 YUM 软件源：
 ```
@@ -141,7 +141,7 @@ yum install -y kubelet-1.18.0 kubeadm-1.18.0 kubectl-1.18.0
 systemctl enable kubelet
 ```
 
-### **1.4 - 初始化 Kubernetes 集群**
+### 1.4 - 初始化 Kubernetes 集群
 
 启动 k8s 节点，注意替换 `--apiserver-advertise-address=` 为主机内网实际 IP 地址，检查 `--kubernetes-version` 与安装的 Kubernetes 版本是否一致。
 ```
@@ -217,11 +217,11 @@ NAME         STATUS     ROLES        AGE   VERSION
 k8s-master   Ready      master       8d    v1.18.0
 ```
 
-### **1.5 - 启动 KubeEdge 节点**
+### 1.5 - 启动 KubeEdge 节点
 
-## **2 - 边缘服务器**
+## 2 - 边缘服务器
 
-### **2.1 - 准备环境** 
+### 2.1 - 准备环境
 
 关闭防火墙（永久）：
 ```
@@ -267,7 +267,7 @@ apt install ntpdate -y
 ntpdate time.windows.com
 ```
 
-### **2.2 - 安装 Docker**
+### 2.2 - 安装 Docker
 
 离线安装，Docker 版本：18.09.0。
 
@@ -371,7 +371,7 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-### **2.3 - 安装 Kubernetes**
+### 2.3 - 安装 Kubernetes
 
 版本：1.19.3。
 
@@ -422,7 +422,7 @@ kubectl version
 systemctl enable kubelet
 ```
 
-### **2.4 - 加入 KubeEdge 节点**
+### 2.4 - 加入 KubeEdge 节点
 
 将 keadm 安装包上传到节点，解压后进入 keadm 文件夹：
 ```
@@ -461,7 +461,7 @@ sudo iptables -t nat -A OUTPUT -d 172.31.62.175 -j DNAT --to-destination 8.155.1
 
 ![alt text](../assets/img/k8s-result-2.png)
 
-## **附 - 重置节点**
+## 附 - 重置节点
 
 可能因为各种原因，导致需要重新部署集群。
 ```
