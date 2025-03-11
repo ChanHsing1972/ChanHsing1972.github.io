@@ -9,16 +9,16 @@ math: true
 
 KubeEdge 由云和边缘组成。它建立在 Kubernetes 之上，为联网、应用部署和云与边缘之间的元数据同步提供核心基础设施支持。
 
-## 资源列表
+## 0 - 资源列表
 
 |    类型    |    操作系统    |   主机名   |   IP（内网）    |               所需软件                |
 | :--------: | :------------: | :--------: | :-------------: | :-----------------------------------: |
 | 云端服务器 |   Centos 7.4   | k8s-master |  172.31.62.175  | Docker, Kubernetes cluster, cloudcore |
-| 边缘服务器 | Ubuntu 20.04.6 |   node1    | 192.168.224.132 |    Docker, MQTT（选用）, edgecore     |
+| 边缘服务器 | Ubuntu 20.04.6 |   node0    | 192.168.224.133 |    Docker, MQTT（选用）, edgecore     |
 
-注意：配置时使用的云端服务器 IP **均指内网 IP**，可执行 `ifconfig` 命令查询。本文中所有 IP 地址应根据实际修改。
+注意：配置时使用的云端服务器 IP 均指*内网 IP*，可执行 `ifconfig` 命令查询。本文中所有 IP 地址应根据实际修改。
 
-由于云端和边缘系统不同，故操作有差异，为避免混淆，本文将分为两个部分，分别记录云端和边缘的配置过程。
+由于云端和边缘系统不同，故操作有差异，为避免混淆，本文将分为两个部分，分别记录云端和边缘端的配置过程。
 
 ## 1 - 云端服务器
 
@@ -51,7 +51,7 @@ hostnamectl set-hostname k8s-master
 ```
 cat >> /etc/hosts << EOF
 172.31.62.175 k8s-master
-192.168.224.132 node1
+192.168.224.133 node1
 EOF
 ```
 
@@ -146,7 +146,7 @@ systemctl enable kubelet
 启动 k8s 节点，注意替换 `--apiserver-advertise-address=` 为主机内网实际 IP 地址，检查 `--kubernetes-version` 与安装的 Kubernetes 版本是否一致。
 ```
 kubeadm init \
-  --apiserver-advertise-address=172.31.62.175 \
+  --apiserver-advertise-address=192.168.100.242 \
   --image-repository registry.aliyuncs.com/google_containers \
   --kubernetes-version v1.18.0 \
   --service-cidr=10.96.0.0/12 \
@@ -171,7 +171,6 @@ Then you can join any number of worker nodes by running the following on each as
 
 kubeadm join 172.31.62.175:6443 --token 9lww95.rz7tw9731n8ixuwq \
     --discovery-token-ca-cert-hash sha256:da2a1c4c361399a45963eb5d147bf3db26fe8451502bf7cb2771363680f3ea51
-
 ```
 
 启用 Kubectl：
@@ -193,7 +192,7 @@ wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
-此时执行 `kubectl get pods -n kube-system` 查看状态，发现 flannel 一直处于 `Pending`，即拉取状态。**这是因为 flannel 默认的镜像仓库在国内无法访问，因此我们需要更改镜像源**（具体操作来自[这篇文章](https://freeymw.com/article/21035.html)），将 kube-flannel.yml 文件中 `image:` 后的镜像替换为以下两个：
+此时执行 `kubectl get pods -n kube-system` 查看状态，发现 flannel 一直处于 `Pending`，即拉取状态。这是因为 **flannel 默认的镜像仓库在国内无法访问，因此我们需要更改镜像源**（具体操作来自[这篇文章](https://freeymw.com/article/21035.html)），将 kube-flannel.yml 文件中 `image:` 后的镜像替换为以下两个：
 
 - registry.cn-hangzhou.aliyuncs.com/liuk8s/flannel:v0.21.5
 - registry.cn-hangzhou.aliyuncs.com/liuk8s/flannel-cni-plugin:v1.1.2
@@ -206,7 +205,7 @@ coredns-7ff77c879f-ttjjv             1/1     Running   0          8d
 etcd-k8s-master                      1/1     Running   0          8d
 kube-apiserver-k8s-master            1/1     Running   0          8d
 kube-controller-manager-k8s-master   1/1     Running   0          8d
-kube-proxy-9lj6x                     0/1     Pending   0          18h
+kube-proxy-9lj6x                     1/1     Pending   0          18h
 kube-proxy-zg66s                     1/1     Running   0          8d
 kube-scheduler-k8s-master            1/1     Running   0          8d
 ```
@@ -216,8 +215,6 @@ kube-scheduler-k8s-master            1/1     Running   0          8d
 NAME         STATUS     ROLES        AGE   VERSION
 k8s-master   Ready      master       8d    v1.18.0
 ```
-
-### 1.5 - 启动 KubeEdge 节点
 
 ## 2 - 边缘服务器
 
@@ -241,14 +238,14 @@ sed -ri 's/.*swap.*/#&/' /etc/fstab
 
 根据规划设置主机名：
 ```
-hostnamectl set-hostname node1
+hostnamectl set-hostname node0
 ```
 
 添加 `/etc/hosts` 配置文件：
 ```
 cat >> /etc/hosts << EOF
 172.31.62.175 k8s-master
-192.168.224.132 node1
+192.168.224.133 node0
 EOF
 ```
 
@@ -271,7 +268,7 @@ ntpdate time.windows.com
 
 离线安装，Docker 版本：18.09.0。
 
-访问 [Docker 存档库](https://download.docker.com/linux/static/stable/x86_64/)，下载对应版本的安装包。
+访问 [Docker 存档库](https://download.docker.com/linux/static/stable/x86_64/)，下载对应版本的安装包。（树莓派是 [arm 架构存档库](https://download.docker.com/linux/static/stable/armhf/))
 
 解压：
 ```
@@ -287,13 +284,13 @@ cp docker/* /usr/bin/
 
 ```
 docker.service
- 
+
 [Unit]
 Description=Docker Application Container Engine
 Documentation=https://docs.docker.com
 After=network-online.target firewalld.service
 Wants=network-online.target
- 
+
 [Service]
 Type=notify
 # the default is not to use systemd for cgroups because the delegate issues still
@@ -318,15 +315,16 @@ KillMode=process
 Restart=on-failure
 StartLimitBurst=3
 StartLimitInterval=60s
- 
+
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 载入 Docker 守护进程：
 
 ```
-systemctl daemon-reload
+systemctl daemon-reload 
 ```
 
 设置开机自启，启动 Docker：
@@ -373,7 +371,7 @@ systemctl restart docker
 
 ### 2.3 - 安装 Kubernetes
 
-版本：1.19.3。
+版本：1.28.2。
 
 安装软件包：
 ```
@@ -400,9 +398,9 @@ echo "deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main" | s
 apt-get update
 ```
 
-安装 1.19.3 版本：
+安装 1.28.2版本：
 ```
-apt-get install -y kubelet=1.19.3-00 kubeadm=1.19.3-00 kubectl=1.19.3-00
+apt-get install -y kubelet=1.28.2-00 kubeadm=1.28.2-00 kubectl=1.28.2-00
 ```
 
 锁定版本，防止自动升级：
@@ -431,9 +429,9 @@ cd keadm-v1.6.1-linux-amd64/keadm
 ```
 
 在执行加入节点命令之前，由于网络原因，需要提前将节点所需的文件放在 `/etc/kubeedge` 下：
-- 将 crds 文件夹放置在 `/etc/kubeedge` 下；
-- 将 kubeedge-v1.6.1-linux-amd64.tar.gz 放置在 `/etc/kubeedge` 下；
-- 将 edgecore.service 放在 `/etc/kubeedge` 下。
+- 将 `crds` 文件夹放置在 `/etc/kubeedge` 下；
+- 将 `kubeedge-v1.6.1-linux-amd64.tar.gz` 放置在 `/etc/kubeedge` 下；
+- 将 `edgecore.service` 放在 `/etc/kubeedge` 下。
 
 此处我上传了一份已经配置好的 kubeedge 文件夹到云端服务器，因此**直接将文件夹从云端拉取到节点**即可：
 ```
@@ -441,13 +439,15 @@ scp -r root@8.155.19.255:/home/www/kubeedge /etc
 ```
 
 通过 IPTABLES 信息包过滤系统启动云端和边缘端的端口映射（来自郭健博士论文）：
+
 ```
 sudo iptables -t nat -A OUTPUT -d 172.31.62.175 -j DNAT --to-destination 8.155.19.255 # 在边缘端节点
 ```
 
-执行加入命令：
+执行加入命令（注意修改主机名称）：
+
 ```
-./keadm join --cloudcore-ipport=172.31.62.175:10000 --edgenode-name=node --kubeedge-version=1.6.1 --token=<云端 keadm gettoken 返回的内容>
+./keadm join --cloudcore-ipport=172.31.62.175:10000 --edgenode-name=node0 --kubeedge-version=1.6.1 --token=<云端 keadm gettoken 返回的内容>
 ```
 
 若部署过程中出现：`kubeedge-v1.8.0-linux-amd64.tar.gz in your path checksum failed and do you want to delete this file and try to download again? [y/N]:`
@@ -455,25 +455,51 @@ sudo iptables -t nat -A OUTPUT -d 172.31.62.175 -j DNAT --to-destination 8.155.1
 
 最终页面：
 
-![alt text](../assets/img/k8s-result-1.png)
+```
+kubeedge-v1.6.1-linux-amd64/
+kubeedge-v1.6.1-linux-amd64/edge/
+kubeedge-v1.6.1-linux-amd64/edge/edgecore
+kubeedge-v1.6.1-linux-amd64/cloud/
+kubeedge-v1.6.1-linux-amd64/cloud/csidriver/
+kubeedge-v1.6.1-linux-amd64/cloud/csidriver/csidriver
+kubeedge-v1.6.1-linux-amd64/cloud/admission/
+kubeedge-v1.6.1-linux-amd64/cloud/admission/admission
+kubeedge-v1.6.1-linux-amd64/cloud/cloudcore/
+kubeedge-v1.6.1-linux-amd64/cloud/cloudcore/cloudcore
+kubeedge-v1.6.1-linux-amd64/version
+
+KubeEdge edgecore is running, For logs visit: journalctl -u edgecore.service -b
+```
 
 在云端执行 `kubectl get nodes`，输出如下：
 
-![alt text](../assets/img/k8s-result-2.png)
+```
+[root@k8s-master ~]# kubectl get node
+NAME         STATUS     ROLES        AGE    VERSION
+k8s-master   Ready      master       108d   v1.18.0
+node         Ready      agent,edge   13d    v1.19.3-kubeedge-v1.6.1
+node0        Ready      agent,edge   13d    v1.19.3-kubeedge-v1.6.1
+node1        Ready      agent,edge   13d    v1.19.3-kubeedge-v1.6.1
+```
 
 ## 附 - 重置节点
 
-可能因为各种原因，导致需要重新部署集群。
+可能因为各种原因，导致需要重新部署集群。在 node 节点上执行：
 ```
 kubeadm reset
 ```
 
-过程会询问是否重置，输入 y 然后回车。
+过程会询问是否重置，输入 y 回车确认。
 ```
+systemctl stop edgecore
 rm -rf /root/.kube
 rm -rf /etc/cni/net.d
 rm -rf /etc/kubernetes/*
 rm /etc/systemd/system/edgecore.service
 ```
 
-kubeadm join 重新加入。
+
+在 master 节点上删除 node 节点的指令：
+```
+kubectl delete node <node-name>
+```
