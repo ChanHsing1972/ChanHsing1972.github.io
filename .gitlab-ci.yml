@@ -1,0 +1,20 @@
+// filepath: .gitlab-ci.yml
+image: ruby:2.7
+
+variables:
+  JEKYLL_ENV: production
+  BUNDLE_JOBS: "3"
+
+before_script:
+  - gem install bundler
+  - bundle config set --local without "development test"
+  - bundle install
+
+pages:
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
