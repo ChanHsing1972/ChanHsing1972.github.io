@@ -1,9 +1,9 @@
 ---
-title: 🧑🏻‍💻 Kubernetes 部署
+title: 🧑🏻‍💻 Kubernetes 部署指南
 description: KubeEdge 由云和边缘组成。它建立在 Kubernetes 之上，为联网、应用部署和云与边缘之间的元数据同步提供核心基础设施支持。
 date: 2024-12-02 23:23:19 +0800
-categories: [Schoolwork, Notes]
-tags: [大创]
+categories: [Blogging, Posts]
+tags: [技术, 教程]
 math: true
 ---
 
