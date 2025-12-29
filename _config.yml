@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 尘心
-  email: ChanHsing1972@qq.com # change to your email address
+  email: ChanHsing1972@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/ChanHsing1972 # change to your github homepage
@@ -46,7 +46,7 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: 24HgW_u5I3fM12hhRZXnNtU3WdtcA1ObFyphFK1vQUE # fill in your Google verification code
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
@@ -73,7 +73,7 @@ analytics:
 
 # Pageviews settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
 # Prefer color scheme setting.
 #
