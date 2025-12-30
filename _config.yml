@@ -39,6 +39,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/ChanHsing1972 # change to your github homepage
+    - https://twitter.com/username # optional: add a twitter link
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -70,10 +71,19 @@ analytics:
     domain: # fill in your Matomo domain
   cloudflare:
     id: # fill in your Cloudflare Web Analytics token
+<<<<<<< HEAD
 
 # Pageviews settings
 pageviews:
   provider: goatcounter
+=======
+  fathom:
+    id: # fill in your Fathom Site ID
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
+>>>>>>> v7.4.1
 
 # Prefer color scheme setting.
 #
@@ -83,8 +93,13 @@ pageviews:
 #
 # Available options:
 #
+<<<<<<< HEAD
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
+=======
+#     light — Use the light color scheme
+#     dark — Use the dark color scheme
+>>>>>>> v7.4.1
 #
 theme_mode: # [light | dark]
 
@@ -136,9 +151,15 @@ assets:
     env: # [development | production]
 
 pwa:
+<<<<<<< HEAD
   enabled: true # the option for PWA feature (installable)
   cache:
     enabled: true # the option for PWA offline cache
+=======
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+>>>>>>> v7.4.1
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
@@ -196,6 +217,7 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+<<<<<<< HEAD
   - scope:
       path: assets/js/dist
     values:
@@ -220,8 +242,9 @@ exclude:
   - tools
   - README.md
   - LICENSE
+  - purgecss.js
   - "*.config.js"
-  - package*.json
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]
@@ -230,4 +253,8 @@ jekyll-archives:
     tag: tag
   permalinks:
     tag: /tags/:name/
+<<<<<<< HEAD
     category: /categories/:name/
+=======
+    category: /categories/:name/
+>>>>>>> v7.4.1
