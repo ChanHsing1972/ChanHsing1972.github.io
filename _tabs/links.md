@@ -19,6 +19,6 @@ order: 5
 
 #### [Sakiyary 的小花房](https://blog.sakiyary.cn/)
 
-![Xiaoxiao](../assets/img/links.assets/Xiaoxiao.jpg)
+![Xiaoxiao](../assets/img/links.assets/Xiaoxiao.jpg){: width="32" height="32" .left}
 
 #### [Xiaoxiao](https://sxlin0.github.io/)
