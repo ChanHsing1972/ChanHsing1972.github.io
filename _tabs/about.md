@@ -8,11 +8,17 @@ order: 4
 {: .prompt-info }
 
 <style>
-.lang-toggle {
-  display: flex;
-  justify-content: flex-start;
-  gap: 12px;
+.lang-switcher {
+  margin-bottom: 12px;
 }
+
+.lang-toggle {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lang-input { display: none; }
 
 .lang-btn {
   background-color: transparent;
@@ -33,35 +39,39 @@ order: 4
   border-color: var(--link-color, #007bff);
 }
 
-.lang-btn.active {
+#lang-zh:checked ~ .lang-toggle label[for="lang-zh"],
+#lang-zh-guangdong:checked ~ .lang-toggle label[for="lang-zh-guangdong"],
+#lang-en:checked ~ .lang-toggle label[for="lang-en"] {
   background-color: var(--link-color, #007bff);
   color: #fff;
   border-color: var(--link-color, #007bff);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.lang-content {
-  display: none;
-  animation: fade-in 0.4s ease;
-}
+.lang-content { display: none; animation: fade-in 0.4s ease; }
 
-.lang-content.active {
+.lang-switcher #lang-zh:checked ~ .lang-panels #zh-content,
+.lang-switcher #lang-zh-guangdong:checked ~ .lang-panels #zh-guangdong-content,
+.lang-switcher #lang-en:checked ~ .lang-panels #en-content {
   display: block;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
-<div class="lang-toggle">
-  <button class="lang-btn active" id="btn-zh" data-lang="zh">中文</button>
-  <button class="lang-btn" id="btn-zh-guangdong" data-lang="zh-guangdong">粤語</button>
-  <button class="lang-btn" id="btn-en" data-lang="en">English</button>
-</div>
+<div class="lang-switcher">
+  <input class="lang-input" type="radio" name="lang" id="lang-zh" checked>
+  <input class="lang-input" type="radio" name="lang" id="lang-zh-guangdong">
+  <input class="lang-input" type="radio" name="lang" id="lang-en">
 
-<div id="zh-content" class="lang-content active" markdown="1">
+  <div class="lang-toggle">
+    <label class="lang-btn" for="lang-zh">中文</label>
+    <label class="lang-btn" for="lang-zh-guangdong">粤語</label>
+    <label class="lang-btn" for="lang-en">English</label>
+  </div>
+
+  <div class="lang-panels">
+<div id="zh-content" class="lang-content" markdown="1">
 
 
 ## 🥳 欢迎！
@@ -152,63 +162,7 @@ My interests include: Coding, Badminton, Calligraphy, Guitar, Singing, Music, Ph
 - 24/03/07 - Replaced the previous template.
 - 24/02/23 - Website established, added some introduction.
 
-</div>
-
-<script>
-function switchLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-
-  const zhContent = document.getElementById('zh-content');
-  const zhGuangdongContent = document.getElementById('zh-guangdong-content');
-  const enContent = document.getElementById('en-content');
-  const contents = [zhContent, zhGuangdongContent, enContent];
-  contents.forEach(el => el && el.classList.remove('active'));
-
-  const btnZh = document.getElementById('btn-zh');
-  const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
-  const btnEn = document.getElementById('btn-en');
-  const buttons = [btnZh, btnZhGuangdong, btnEn];
-  buttons.forEach(btn => btn && btn.classList.remove('active'));
-
-  if (lang === 'zh') {
-    if (zhContent) zhContent.classList.add('active');
-    if (btnZh) btnZh.classList.add('active');
-  } else if (lang === 'zh-guangdong') {
-    if (zhGuangdongContent) zhGuangdongContent.classList.add('active');
-    if (btnZhGuangdong) btnZhGuangdong.classList.add('active');
-  } else if (lang === 'en') {
-    if (enContent) enContent.classList.add('active');
-    if (btnEn) btnEn.classList.add('active');
-  }
-}
-
-function initLangToggle() {
-  const wrapper = document.querySelector('.lang-toggle');
-  if (wrapper && !wrapper.dataset.bound) {
-    wrapper.addEventListener('click', function(e) {
-      const target = e.target.closest('[data-lang]');
-      if (target) {
-        const lang = target.dataset.lang;
-        switchLang(lang);
-      }
-    });
-    wrapper.dataset.bound = 'true';
-  }
-
-  const savedLang = localStorage.getItem('preferredLang');
-  if (savedLang) {
-    switchLang(savedLang);
-  }
-}
-
-// 初次加载
-document.addEventListener('DOMContentLoaded', initLangToggle);
-
-// Chirpy 使用 PJAX，页面切换不会触发 DOMContentLoaded，需要在 PJAX 完成后重新绑定（代理模式避免重复绑定）
-document.addEventListener('pjax:complete', initLangToggle);
-</script>
-
-![about](../assets/img/about-pic.jpg)
+<img src="../assets/img/about-pic.jpg" alt="about" loading="lazy">
 
 <!-- 正在学习和使用的技术与工具： -->
 <!-- <div align=left>
