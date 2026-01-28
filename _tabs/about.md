@@ -56,9 +56,9 @@ order: 4
 </style>
 
 <div class="lang-toggle">
-  <button class="lang-btn active" id="btn-zh">中文</button>
-  <button class="lang-btn" id="btn-zh-guangdong">粤語</button>
-  <button class="lang-btn" id="btn-en">English</button>
+  <button class="lang-btn active" id="btn-zh" data-lang="zh">中文</button>
+  <button class="lang-btn" id="btn-zh-guangdong" data-lang="zh-guangdong">粤語</button>
+  <button class="lang-btn" id="btn-en" data-lang="en">English</button>
 </div>
 
 <div id="zh-content" class="lang-content active" markdown="1">
@@ -183,13 +183,17 @@ function switchLang(lang) {
 }
 
 function initLangToggle() {
-  const btnZh = document.getElementById('btn-zh');
-  const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
-  const btnEn = document.getElementById('btn-en');
-
-  if (btnZh) btnZh.addEventListener('click', function() { switchLang('zh'); });
-  if (btnZhGuangdong) btnZhGuangdong.addEventListener('click', function() { switchLang('zh-guangdong'); });
-  if (btnEn) btnEn.addEventListener('click', function() { switchLang('en'); });
+  const wrapper = document.querySelector('.lang-toggle');
+  if (wrapper && !wrapper.dataset.bound) {
+    wrapper.addEventListener('click', function(e) {
+      const target = e.target.closest('[data-lang]');
+      if (target) {
+        const lang = target.dataset.lang;
+        switchLang(lang);
+      }
+    });
+    wrapper.dataset.bound = 'true';
+  }
 
   const savedLang = localStorage.getItem('preferredLang');
   if (savedLang) {
@@ -200,7 +204,7 @@ function initLangToggle() {
 // 初次加载
 document.addEventListener('DOMContentLoaded', initLangToggle);
 
-// Chirpy 使用 PJAX，页面切换不会触发 DOMContentLoaded，需要在 PJAX 完成后重新绑定
+// Chirpy 使用 PJAX，页面切换不会触发 DOMContentLoaded，需要在 PJAX 完成后重新绑定（代理模式避免重复绑定）
 document.addEventListener('pjax:complete', initLangToggle);
 </script>
 
