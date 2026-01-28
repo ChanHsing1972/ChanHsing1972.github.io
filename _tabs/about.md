@@ -156,21 +156,20 @@ My interests include: Coding, Badminton, Calligraphy, Guitar, Singing, Music, Ph
 
 <script>
 function switchLang(lang) {
-  // 保存用户的语言偏好
   localStorage.setItem('preferredLang', lang);
-  
+
   const zhContent = document.getElementById('zh-content');
   const zhGuangdongContent = document.getElementById('zh-guangdong-content');
   const enContent = document.getElementById('en-content');
   const contents = [zhContent, zhGuangdongContent, enContent];
   contents.forEach(el => el && el.classList.remove('active'));
-  
+
   const btnZh = document.getElementById('btn-zh');
   const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
   const btnEn = document.getElementById('btn-en');
   const buttons = [btnZh, btnZhGuangdong, btnEn];
   buttons.forEach(btn => btn && btn.classList.remove('active'));
-  
+
   if (lang === 'zh') {
     if (zhContent) zhContent.classList.add('active');
     if (btnZh) btnZh.classList.add('active');
@@ -183,9 +182,7 @@ function switchLang(lang) {
   }
 }
 
-// 页面加载时恢复用户的语言偏好
-document.addEventListener('DOMContentLoaded', function() {
-  // 绑定事件监听器
+function initLangToggle() {
   const btnZh = document.getElementById('btn-zh');
   const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
   const btnEn = document.getElementById('btn-en');
@@ -198,7 +195,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (savedLang) {
     switchLang(savedLang);
   }
-});
+}
+
+// 初次加载
+document.addEventListener('DOMContentLoaded', initLangToggle);
+
+// Chirpy 使用 PJAX，页面切换不会触发 DOMContentLoaded，需要在 PJAX 完成后重新绑定
+document.addEventListener('pjax:complete', initLangToggle);
 </script>
 
 ![about](../assets/img/about-pic.jpg)
