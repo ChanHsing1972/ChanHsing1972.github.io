@@ -7,7 +7,6 @@ order: 4
 > 若加载速度缓慢，可使用魔法 🪄 访问
 {: .prompt-info }
 
-
 <style>
 .lang-toggle {
   display: flex;
@@ -57,9 +56,9 @@ order: 4
 </style>
 
 <div class="lang-toggle">
-  <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
-  <button class="lang-btn" onclick="switchLang('zh-guangdong')">粤語</button>
-  <button class="lang-btn" onclick="switchLang('en')">English</button>
+  <button class="lang-btn active" id="btn-zh">中文</button>
+  <button class="lang-btn" id="btn-zh-guangdong">粤語</button>
+  <button class="lang-btn" id="btn-en">English</button>
 </div>
 
 <div id="zh-content" class="lang-content active" markdown="1">
@@ -160,39 +159,41 @@ function switchLang(lang) {
   // 保存用户的语言偏好
   localStorage.setItem('preferredLang', lang);
   
-  // 切换内容显示
   const zhContent = document.getElementById('zh-content');
   const zhGuangdongContent = document.getElementById('zh-guangdong-content');
   const enContent = document.getElementById('en-content');
-  const buttons = document.querySelectorAll('.lang-btn');
+  const contents = [zhContent, zhGuangdongContent, enContent];
+  contents.forEach(el => el && el.classList.remove('active'));
+  
+  const btnZh = document.getElementById('btn-zh');
+  const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
+  const btnEn = document.getElementById('btn-en');
+  const buttons = [btnZh, btnZhGuangdong, btnEn];
+  buttons.forEach(btn => btn && btn.classList.remove('active'));
   
   if (lang === 'zh') {
-    zhContent.classList.add('active');
-    zhGuangdongContent.classList.remove('active');
-    enContent.classList.remove('active');
+    if (zhContent) zhContent.classList.add('active');
+    if (btnZh) btnZh.classList.add('active');
   } else if (lang === 'zh-guangdong') {
-    zhContent.classList.remove('active');
-    zhGuangdongContent.classList.add('active');
-    enContent.classList.remove('active');
+    if (zhGuangdongContent) zhGuangdongContent.classList.add('active');
+    if (btnZhGuangdong) btnZhGuangdong.classList.add('active');
   } else if (lang === 'en') {
-    zhContent.classList.remove('active');
-    zhGuangdongContent.classList.remove('active');
-    enContent.classList.add('active');
+    if (enContent) enContent.classList.add('active');
+    if (btnEn) btnEn.classList.add('active');
   }
-
-  // 更新按钮状态
-  buttons.forEach(button => {
-    if (button.textContent === (lang === 'zh' ? '中文' : lang === 'zh-guangdong' ? '粤語' : 'English')) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
-
 }
 
 // 页面加载时恢复用户的语言偏好
 document.addEventListener('DOMContentLoaded', function() {
+  // 绑定事件监听器
+  const btnZh = document.getElementById('btn-zh');
+  const btnZhGuangdong = document.getElementById('btn-zh-guangdong');
+  const btnEn = document.getElementById('btn-en');
+
+  if (btnZh) btnZh.addEventListener('click', function() { switchLang('zh'); });
+  if (btnZhGuangdong) btnZhGuangdong.addEventListener('click', function() { switchLang('zh-guangdong'); });
+  if (btnEn) btnEn.addEventListener('click', function() { switchLang('en'); });
+
   const savedLang = localStorage.getItem('preferredLang');
   if (savedLang) {
     switchLang(savedLang);
