@@ -1,0 +1,70 @@
+<!-- 自定义 MathJax 配置 -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams',
+      // 支持更多 LaTeX 包和宏
+      packages: {'[+]': ['ams', 'noerrors', 'noundefined', 'boldsymbol']},
+      macros: {
+        // 添加对大括号的支持
+        lcurl: '\\{',
+        rcurl: '\\}',
+        // 添加其他常用宏
+        xRightarrow: ['\\overset{#1}{\\longrightarrow}', 1],
+        displaystyle: '\\displaystyle',
+        boldsymbol: ['\\mathbf{#1}', 1]
+      }
+    },
+    svg: {
+      fontCache: 'global'
+    },
+    startup: {
+      // 确保 MathJax 在页面加载和刷新后都能正确初始化
+      pageReady: function () {
+        return MathJax.startup.defaultPageReady().then(function () {
+          console.log('MathJax initial typesetting complete');
+        });
+      }
+    },
+    options: {
+      renderActions: {
+        addMenu: []
+      },
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+
+<!-- 加载 MathJax -->
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<!-- 页面加载后重新渲染数学公式 -->
+<script>
+  // 监听页面导航事件，确保刷新后公式能正确渲染
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.typesetPromise().catch(function (err) {
+        console.error('MathJax typeset failed: ' + err.message);
+      });
+    }
+  });
+  
+  // 如果使用了 PJAX 或其他动态加载技术，添加以下代码
+  if (window.history && window.history.pushState) {
+    window.addEventListener('popstate', function() {
+      if (typeof MathJax !== 'undefined') {
+        setTimeout(function() {
+          MathJax.typesetPromise().catch(function (err) {
+            console.error('MathJax typeset failed after navigation: ' + err.message);
+          });
+        }, 100);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,64 @@
+---
+# Custom CSS for additional syntax highlighting support
+---
+
+/* 
+ * MySQL语法高亮支持
+ * Rouge 默认支持 sql，但可以增强 MySQL 特定关键字的显示
+ */
+.language-mysql,
+.language-sql {
+  .highlight & {
+    /* MySQL 特定关键字 */
+    .k { color: #0000ff; font-weight: bold; } /* 关键字：SELECT, FROM, WHERE 等 */
+    .kt { color: #2b91af; } /* 类型：INT, VARCHAR 等 */
+    .nf { color: #795e26; } /* 函数名 */
+    .s, .s1, .s2 { color: #a31515; } /* 字符串 */
+    .mi { color: #098658; } /* 数字 */
+    .c, .c1, .cm { color: #008000; font-style: italic; } /* 注释 */
+  }
+}
+
+/*
+ * 伪代码语法高亮
+ * 使用 plaintext 或 text 作为标识符
+ */
+.language-pseudocode,
+.language-pseudo,
+.language-algorithm {
+  .highlight & {
+    font-family: 'Courier New', Courier, monospace;
+    
+    /* 关键字风格 */
+    .k, .kd, .kn, .kp, .kr, .kt {
+      color: #0000ff;
+      font-weight: bold;
+    }
+    
+    /* 注释风格 */
+    .c, .c1, .cm {
+      color: #008000;
+      font-style: italic;
+    }
+    
+    /* 字符串 */
+    .s, .s1, .s2 {
+      color: #a31515;
+    }
+  }
+}
+
+/* 确保代码块的基本样式 */
+.highlight {
+  pre {
+    border-radius: 0.375rem;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
