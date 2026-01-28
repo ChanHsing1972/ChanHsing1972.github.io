@@ -11,22 +11,18 @@ lang: zh-CN
 
 languages: ["zh-CN", "en"]
 
-plugins:
-  - jekyll-polyglot
+# plugins:
+#   - jekyll-polyglot
 
-polyglot:
-  default_lang: "zh-CN"
-  languages: ["zh-CN", "en"]
-  parallel_localization: false 
-  exclude_from_localization:
-    - assets
-    - tools
-    - javascript
-    - images
-    - css
-    - js
-    - _includes
-    - _layouts
+# polyglot:
+#   default_lang: "zh-CN"
+#   languages: ["zh-CN", "en"]
+#   parallel_localization: false 
+#   exclude_from_localization:
+#     - tools
+#     - javascript
+#     - _includes
+#     - _layouts
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Shanghai
