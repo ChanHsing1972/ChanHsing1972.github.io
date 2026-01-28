@@ -10,9 +10,9 @@ order: 4
 
 我叫尘心，是一名在 [NJU](https://www.nju.edu.cn/) [智能软件与工程学院](https://ise.nju.edu.cn/)修炼的萌新大学牲，男，未婚，非单身。
 
-每日被早八晚九折磨得不成人形，梦想是实现终生赖床自由，最喜欢的职业是日本天皇（啥事不干也能过得舒坦），最想做的事是放完寒假就放暑假，以及带焖焖猪一起到处旅行。
+每日被早八晚九折磨得不成人形，梦想是实现终生赖床自由，最想做的事是放完寒假就放暑假，以及带焖焖猪一起到处旅行。
 
-热衷于羽毛球 🏸、书法 🖋️、吉他 🎸、音乐 🎶 和**游戏** 🤩—— 黑悟空，CS2，战地，GTA 5，刺客信条，杀鸡，地平线，原，MC……欲知详情，请移步[我的 Steam 主页](https://steamcommunity.com/id/ChanHsing1972/)。
+热衷于羽毛球 🏸、书法 🖋️、吉他 🎸、音乐 🎶 和**游戏** 🤩—— CS2，战地，GTA 5，刺客信条，杀鸡，地平线，原，MC……欲知详情，请移步[我的 Steam 主页](https://steamcommunity.com/id/ChanHsing1972/)。
 
 Hi there. Welcome to my personal homepage!
 
