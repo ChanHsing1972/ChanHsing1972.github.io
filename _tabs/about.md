@@ -91,7 +91,7 @@ order: 4
 - 📷 关于摄影：单纯喜爱，没啥技术。
 - 🦐 关于美食：作为成都人，吃是生活的第一要义。
 - 🎨 关于设计：平面设计爱好者，奉行极简主义与留白。对排版细节充满偏执的追求，喜爱并欣赏一切美的设计。
-- 🎮 关于游戏：CS2 入门级玩家，长期遭受电子阳痿困扰中。欲知详情，请移步[我的 Steam 主页](https://steamcommunity.com/id/ChanHsing1972/)。
+- 🎮 关于游戏：CS2 入门级玩家，长期遭受[电子阳痿](https://zh.moegirl.org.cn/%E7%94%B5%E5%AD%90%E9%98%B3%E7%97%BF)困扰中。欲知详情，请移步[我的 Steam 主页](https://steamcommunity.com/id/ChanHsing1972/)。
 
 ## ⚙️ 更新日志
 
@@ -108,27 +108,27 @@ order: 4
 
 ## 🥳 歡迎！
 
-我係塵心，四川成都人，依家喺[南京大學](https://www.nju.edu.cn/) [智能軟件與工程學院](https://ise.nju.edu.cn/)讀緊本科生。高中畢業於成都七中高新校區，並喺嗰度度過咗三年美好嘅高中時光，詳見[《吹夢到西洲》](https://chanhsing1972.github.io/posts/Blow-Dream-To-The-West-Isle/)。每日畀早八晚九折磨到唔似人形 😫，夢想係實現終身瞓懶覺自由 🛏️，最想做嘅事係放完寒假就放暑假，最唔鍾意嘅事係寫自我介紹。
+我係塵心，四川成都人，[南京大學](https://www.nju.edu.cn/) [智能軟件與工程學院](https://ise.nju.edu.cn/)喺讀本科生。高中畢業喺成都七中高新校區，並喺嗰度度過咗三年美好嘅高中時光，詳情可以睇返[《吹夢到西洲》](https://chanhsing1972.github.io/posts/Blow-Dream-To-The-West-Isle/)。每日畀早八晚九折磨到冇晒人樣 😫，夢想係實現終身瞓懶覺自由 🛏️，最想做嘅事係放完寒假就放暑假，最憎嘅事就係寫自我介紹。
 
 塵心熱衷於：Coding、羽毛球、書法、結他、唱歌、音樂、攝影、美食、設計、打機。
 
-- 🧑🏻‍💻 關於 Coding：痴迷於鼓搗新技術，探索新事物，並想方設法令佢哋照我意思運作。呢啲帶嚩好大成就感同滿足感。依家主要用 C/C++、Java、Python、JavaScript 等語言，開發過 Web 應用、小程序、桌面應用、自製遊戲。
-- 🏸 關於羽毛球：中規中矩，唔算勁但都唔差。
-- 🖋️ 關於書法：好鍾意硬筆書法，鋼筆唔離手，練字唔停。
-- 🎸 關於結他：自學流，入門級別，仲要多啲練習。
-- 🎤 關於唱歌：浴室歌神，感情唔夠，靠音準頂住。
-- 🎵 關於音樂：生活冇音樂唔得！特別鍾意粵語流行、爵士同古典。歌手入面，最愛陳奕迅，因為佢愛上粵語，想學識但未成功。鍾意嘅歌可以睇 [Apple Music 喜愛列表](https://music.apple.com/cn/playlist/favorite-songs/pl.u-b6Ud2vd1K)。
+- 🧑🏻‍💻 關於 Coding：癡迷於搞埋啲新技術，探索新事物，仲想方設法等佢哋跟住我諗嘅方式運作。呢樣嘢帶畀我極大嘅成就感同滿足感。目前主要用緊 C/C++、Java、Python、JavaScript 等編程語言，開發過 Web 應用、小程式、桌面應用、自製遊戲。
+- 🏸 關於羽毛球：比上不足，比下有餘。
+- 🖋️ 關於書法：好鍾意硬筆書法，鋼筆唔離手，練字冇停過
+- 🎸 關於結他：自學流，入門級別，仲要多多練習。
+- 🎤 關於唱歌：浴室歌神，感情唔夠，音準嚟湊。
+- 🎵 關於音樂：生活唔可以冇音樂！尤其鍾意粵語流行、爵士同古典。歌手當中，最愛陳奕迅，亦都因為噉愛上咗粵語，想學識但未成功。鍾意嘅歌詳情可以睇返 [Apple Music 喜愛一覽](https://music.apple.com/cn/playlist/favorite-songs/pl.u-b6Ud2vd1K)。
 - 📷 關於攝影：純粹鍾意，冇乜技術。
-- 🦐 關於美食：作為成都人，食係生活第一要義。
-- 🎨 關於設計：平面設計愛好者，奉行極簡主義與留白。對排版細節有偏執追求，鍾意欣賞一切靚設計。
-- 🎮 關於打機：CS2 入門級玩家，長期受電子陽痿困擾中。想知詳情請去[我嘅 Steam 主頁](https://steamcommunity.com/id/ChanHsing1972/)。
+- 🦐 關於美食：作為成都人，食係生活嘅第一要義。
+- 🎨 關於設計：平面設計愛好者，奉行極簡主義同埋留白。對排版細節有偏執追求，鍾意欣賞一切靚設計。
+- 🎮 關於打機：CS2 入門級玩家，長期受[「電子陽痿」](https://zh.moegirl.org.cn/%E7%94%B5%E5%AD%90%E9%98%B3%E7%97%BF)困擾。想知詳情請去[我嘅 Steam 主頁](https://steamcommunity.com/id/ChanHsing1972/)。
 
 ## ⚙️ 更新日誌
 
-- 24/12/02 - 換咗新嘅漸變色圖標。
+- 24/12/02 - 換咗新嘅漸變色 Icon。
 - 24/09/09 - 調整咗 Markdown 格式，完全放棄咗 TOC。
 - 24/08/11 - 更新咗模板，文章加咗「描述」功能，調整咗佈局，「分類」同「標籤」有重大更改。
-- 24/04/02 - 更新咗 logo 同網站圖標。
+- 24/04/02 - 更新咗 Logo 同網站 Icon。
 - 24/03/07 - 換咗新模板。
 - 24/02/23 - 建立網站，加咗啲介紹。
 
@@ -138,20 +138,20 @@ order: 4
 
 ## 🥳 Welcome!
 
-I'm Chenxin, from Chengdu, Sichuan, currently an undergraduate at the [School of Intelligent Software and Engineering](https://ise.nju.edu.cn/) of [Nanjing University](https://www.nju.edu.cn/). I graduated from Chengdu No.7 High School (Gaoxin Campus), where I spent three wonderful years—see [Blow Dream To The West Isle](https://chanhsing1972.github.io/posts/Blow-Dream-To-The-West-Isle/) for details. The daily grind from 8am to 9pm nearly broke me 😫. My dream is to sleep in forever 🛏️, my greatest wish is to have summer vacation right after winter vacation, and my least favorite thing is writing self-introductions.
+I'm Chenxin, from Chengdu, Sichuan, currently an undergraduate at the [School of Intelligent Software and Engineering](https://ise.nju.edu.cn/) of [Nanjing University](https://www.nju.edu.cn/). I graduated from Chengdu No.7 High School (Gaoxin Campus), where I spent three wonderful years—see [Blow Dream To The West Isle](https://chanhsing1972.github.io/posts/Blow-Dream-To-The-West-Isle/) for details. Currently, I am worn out by the daily grind of "8 AM to 9 PM" classes 😫. My dream is to sleep in forever 🛏️, my greatest wish is to have summer break start right after winter break, and my least favorite thing is writing self-introductions.
 
-My interests include: Coding, Badminton, Calligraphy, Guitar, Singing, Music, Photography, Food, Design, Gaming.
+I am passionate about: Coding, Badminton, Calligraphy, Guitar, Singing, Music, Photography, Food, Design, Gaming.
 
-- 🧑🏻‍💻 About Coding: I'm passionate about tinkering with new technologies and exploring new things, always trying to make them work the way I want. This brings me great satisfaction. I mainly use C/C++, Java, Python, and JavaScript, and have developed web apps, mini-programs, desktop apps, and my own games.
-- 🏸 About Badminton: Not the best, not the worst.
-- 🖋️ About Calligraphy: Love pen calligraphy. Always have a pen in hand, never stop practicing.
-- 🎸 About Guitar: Self-taught, beginner level, still need more practice.
-- 🎤 About Singing: Bathroom singer, lacking emotion but making up for it with pitch.
-- 🎵 About Music: Can't live without music! Especially love Cantonese pop, jazz, and classical. My favorite singer is Eason Chan, which made me fall in love with Cantonese and try to learn it (not quite there yet). Check out my [Apple Music favorites](https://music.apple.com/cn/playlist/favorite-songs/pl.u-b6Ud2vd1K).
-- 📷 About Photography: Just a hobby, not much skill.
-- 🦐 About Food: As a Chengdu native, eating is the top priority in life.
-- 🎨 About Design: Enthusiast of graphic design, advocate of minimalism and whitespace. Obsessed with typography details, love and appreciate all beautiful designs.
-- 🎮 About Gaming: Entry-level CS2 player, long-term victim of "electronic ED". For more, visit [my Steam homepage](https://steamcommunity.com/id/ChanHsing1972/).
+- 🧑🏻‍💻 Coding: I am obsessed with tinkering with new technologies and exploring new things, finding ways to make them work exactly as I envision. This brings me a great sense of accomplishment. I primarily use C/C++, Java, Python, and JavaScript, and have developed web apps, mini-programs, desktop apps, and indie games.
+- 🏸 Badminton: Not the best, not the worst.
+- 🖋️ Calligraphy: Love pen calligraphy. Always have a pen in hand, never stop practicing.
+- 🎸 Guitar: Self-taught, entry-level, still need more practice.
+- 🎤 Singing: Bathroom singer, lacking emotion but making up for it with pitch.
+- 🎵 Music: Can't live without music! Especially love Cantonese pop, jazz, and classical. My favorite singer is Eason Chan, which made me fall in love with Cantonese and try to learn it (not quite there yet). Check out my [Apple Music favorites](https://music.apple.com/cn/playlist/favorite-songs/pl.u-b6Ud2vd1K).
+- 📷 Photography: Just a hobby, not much skill.
+- 🦐 Food: As a Chengdu native, eating is the top priority in life.
+- 🎨 Design: Enthusiast of graphic design, advocate of minimalism and whitespace. Obsessed with typography details, love and appreciate all beautiful designs.
+- 🎮 Gaming: An entry-level CS2 player, long-term victim of ["electronic ED"](https://zh.moegirl.org.cn/%E7%94%B5%E5%AD%90%E9%98%B3%E7%97%BF). For more, visit [my Steam homepage](https://steamcommunity.com/id/ChanHsing1972/).
 
 ## ⚙️ Update Log
 
